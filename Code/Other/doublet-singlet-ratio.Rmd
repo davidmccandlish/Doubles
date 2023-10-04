@@ -85,9 +85,9 @@ rownames(alphas)[dim(alphas)[1]] <- name
 
 ```
 
-# Non-cancerous somatic cells
+## Non-cancerous somatic cells
 
-## Lee-Six whole genome
+### Lee-Six whole genome
 
 Here I am just summing over the tables for singlets and doublets, then dividing to get the ratio. 
 
@@ -119,7 +119,7 @@ rownames(alphas)[dim(alphas)[1]] <- name
 
 ```
 
-## Mitchell, et al blood cells, coding only 
+### Mitchell, et al blood cells, coding only 
 
 I did not understand how they are coding up mutations, so I asked Iñigo Martincorena and he explained how to process the files and provided some R code, which is integrated below. 
 
@@ -183,7 +183,7 @@ alphas <- rbind(alphas, c(ratio, type, scope, bibcode, comment))
 rownames(alphas)[dim(alphas)[1]] <- name
 alphas[, 1:4]
 ```
-## Coding mutations from Lee-Six
+### Coding mutations from Lee-Six
 
 The corresponding supplement from Lee-Six, et al. does not have the doubles in it, for some reason.  Iñigo Martincorena was again helpful in explaining where to get the ratio, which simply involves summing over some columns. 
 
